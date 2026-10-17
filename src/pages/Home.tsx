@@ -7,6 +7,7 @@ import CategorySection from "../components/CategorySection";
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   function handleSearch(searchValue: string) {
     setSearchTerm(searchValue);
@@ -20,8 +21,11 @@ function Home() {
         <h2>Explore the Universe</h2>
         <p>Search and Discover objects across the cosmos.</p>
         <SearchBar onSearch={handleSearch} />
-        <FeaturedSection searchTerm={searchTerm} />
-        <CategorySection />
+        <FeaturedSection
+          searchTerm={searchTerm}
+          selectedCategory={selectedCategory}
+        />
+        <CategorySection onCategorySelect={setSelectedCategory} />
       </main>
     </>
   );

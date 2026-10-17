@@ -3,4 +3,6 @@ export type SpaceObject = {
   name: string;
   category: string;
   description: string;
+  distance: string;
+  constellation: string;
 };
