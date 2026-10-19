@@ -22,7 +22,7 @@ function FeaturedSection({
   return (
     <section>
       <h2>Featured Object</h2>
-      <div>
+      <div className="space-grid">
         {filteredObjects.length === 0 ? (
           <p>No space objects found.</p>
         ) : (
@@ -33,6 +33,9 @@ function FeaturedSection({
                 name={spaceObject.name}
                 category={spaceObject.category}
                 description={spaceObject.description}
+                distance={spaceObject.distance}
+                constellation={spaceObject.constellation}
+                imageUrl={spaceObject.imageUrl}
               />
             );
           })

@@ -5,4 +5,5 @@ export type SpaceObject = {
   description: string;
   distance: string;
   constellation: string;
+  imageUrl: string;
 };

@@ -1,8 +1,11 @@
 function Hero() {
   return (
-    <section>
+    <section className="hero-section">
+      <p className="hero-label">ASTRONOMY DISCOVERY</p>
       <h2>Explore the Universe</h2>
-      <p>Discover planets, stars, agalxies, nebulae and more.</p>
+      <p className="hero-description">
+        Discover planets, stars, galaxies, nebulae and more.
+      </p>
     </section>
   );
 }

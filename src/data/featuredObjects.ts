@@ -8,6 +8,7 @@ export const featuredObjects: SpaceObject[] = [
     description: "One of the closest major galaxies to the Milky Way.",
     distance: "2.5 million light-years",
     constellation: "Andromeda",
+    imageUrl: "/images/andromeda.jpg",
   },
   {
     id: "saturn",
@@ -16,6 +17,7 @@ export const featuredObjects: SpaceObject[] = [
     description: "A gas giant famous for its extensive ring system",
     distance: "1.4 billion km from the sun",
     constellation: "N/A",
+    imageUrl: "/images/saturn.jpg",
   },
   {
     id: "orion-nebula",
@@ -24,5 +26,6 @@ export const featuredObjects: SpaceObject[] = [
     description: "A massive stellas nursery located in the constellation Orion",
     distance: "1,344 light-years",
     constellation: "Orion",
+    imageUrl: "/images/orion-nebula.jpg",
   },
 ];
