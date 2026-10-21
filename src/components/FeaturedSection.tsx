@@ -22,6 +22,10 @@ function FeaturedSection({
   return (
     <section>
       <h2>Featured Object</h2>
+      <p>
+        {filteredObjects.length}{" "}
+        {filteredObjects.length === 1 ? "object" : "objects"} found.
+      </p>
       <div className="space-grid">
         {filteredObjects.length === 0 ? (
           <p>No space objects found.</p>

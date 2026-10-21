@@ -19,15 +19,17 @@ function SpaceObjectCard({
     <article className="space-card">
       <img className="space-card-image" src={imageUrl} alt={name} />
       <h3>{name}</h3>
-      <p>{category}</p>
+      <p className="space-card-category">{category}</p>
       <p>{description}</p>
 
-      <p>
-        <strong>Distance:</strong> {distance}
-      </p>
-      <p>
-        <strong>Constellation: </strong> {constellation}
-      </p>
+      <div className="space-card-meta">
+        <p>
+          <strong>Distance:</strong> {distance}
+        </p>
+        <p>
+          <strong>Constellation: </strong> {constellation}
+        </p>
+      </div>
     </article>
   );
 }

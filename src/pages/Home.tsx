@@ -25,7 +25,10 @@ function Home() {
           searchTerm={searchTerm}
           selectedCategory={selectedCategory}
         />
-        <CategorySection onCategorySelect={setSelectedCategory} />
+        <CategorySection
+          onCategorySelect={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
       </main>
     </>
   );
