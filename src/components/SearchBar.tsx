@@ -7,11 +7,12 @@ type SearchBarProps = {
 function SearchBar({ onSearch }: SearchBarProps) {
   const [searchTerm, setSearchTerm] = useState("");
 
-  function handleSearch() {
-    onSearch(searchTerm);
+  function handleSearch(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    onSearch(searchTerm.trim());
   }
   return (
-    <div className="search-bar">
+    <form className="search-bar" onSubmit={handleSearch}>
       <input
         type="text"
         placeholder="Search for a planet, star, galaxy..."
@@ -19,10 +20,19 @@ function SearchBar({ onSearch }: SearchBarProps) {
         onChange={(event) => setSearchTerm(event.target.value)}
       />
 
-      <button type="button" onClick={handleSearch}>
-        Search
-      </button>
-    </div>
+      <button type="submit">Search</button>
+      {searchTerm !== "" && (
+        <button
+          type="button"
+          onClick={() => {
+            setSearchTerm("");
+            onSearch("");
+          }}
+        >
+          Clear
+        </button>
+      )}
+    </form>
   );
 }
 
