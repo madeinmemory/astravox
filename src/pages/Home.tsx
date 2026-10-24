@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { SpaceObject } from "../types/SpaceObjects";
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Hero from "../components/Hero";
@@ -8,6 +9,9 @@ import CategorySection from "../components/CategorySection";
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedObject, setSelectedObject] = useState<SpaceObject | null>(
+    null,
+  );
 
   function handleSearch(searchValue: string) {
     setSearchTerm(searchValue);

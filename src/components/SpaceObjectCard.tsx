@@ -5,6 +5,7 @@ type SpaceObjectCardProps = {
   distance: string;
   constellation: string;
   imageUrl: string;
+  onSelect: () => void;
 };
 
 function SpaceObjectCard({
@@ -14,9 +15,10 @@ function SpaceObjectCard({
   distance,
   constellation,
   imageUrl,
+  onSelect,
 }: SpaceObjectCardProps) {
   return (
-    <article className="space-card">
+    <article className="space-card" onClick={onSelect}>
       <img className="space-card-image" src={imageUrl} alt={name} />
       <h3>{name}</h3>
       <p className="space-card-category">{category}</p>
