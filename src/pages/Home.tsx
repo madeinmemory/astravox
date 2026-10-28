@@ -28,7 +28,10 @@ function Home() {
         <FeaturedSection
           searchTerm={searchTerm}
           selectedCategory={selectedCategory}
+          onObjectSelect={setSelectedObject}
         />
+        {selectedObject && <p>Selected: {selectedObject.name}</p>}
+
         <CategorySection
           onCategorySelect={setSelectedCategory}
           selectedCategory={selectedCategory}

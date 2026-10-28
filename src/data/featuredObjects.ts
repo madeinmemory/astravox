@@ -14,7 +14,7 @@ export const featuredObjects: SpaceObject[] = [
     id: "saturn",
     name: "Saturn",
     category: "Planet",
-    description: "A gas giant famous for its extensive ring system",
+    description: "A gas giant famous for its extensive ring system.",
     distance: "1.4 billion km from the sun",
     constellation: "N/A",
     imageUrl: "/images/saturn.jpg",
@@ -23,7 +23,8 @@ export const featuredObjects: SpaceObject[] = [
     id: "orion-nebula",
     name: "Orion Nebula",
     category: "Nebula",
-    description: "A massive stellas nursery located in the constellation Orion",
+    description:
+      "A massive stellas nursery located in the constellation Orion.",
     distance: "1,344 light-years",
     constellation: "Orion",
     imageUrl: "/images/orion-nebula.jpg",

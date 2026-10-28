@@ -1,14 +1,17 @@
 import SpaceObjectCard from "./SpaceObjectCard";
 import { featuredObjects } from "../data/featuredObjects";
+import type { SpaceObject } from "../types/SpaceObjects";
 
 type FeaturedSectionProps = {
   searchTerm: string;
   selectedCategory: string;
+  onObjectSelect: (spaceObject: SpaceObject) => void;
 };
 
 function FeaturedSection({
   searchTerm,
   selectedCategory,
+  onObjectSelect,
 }: FeaturedSectionProps) {
   const filteredObjects = featuredObjects.filter((spaceObject) => {
     const matchesSearch = spaceObject.name
@@ -40,6 +43,7 @@ function FeaturedSection({
                 distance={spaceObject.distance}
                 constellation={spaceObject.constellation}
                 imageUrl={spaceObject.imageUrl}
+                onSelect={() => onObjectSelect(spaceObject)}
               />
             );
           })
