@@ -5,6 +5,7 @@ import SearchBar from "../components/SearchBar";
 import Hero from "../components/Hero";
 import FeaturedSection from "../components/FeaturedSection";
 import CategorySection from "../components/CategorySection";
+import SpaceObjectDetails from "../components/SpaceObjectDetails";
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -30,7 +31,7 @@ function Home() {
           selectedCategory={selectedCategory}
           onObjectSelect={setSelectedObject}
         />
-        {selectedObject && <p>Selected: {selectedObject.name}</p>}
+        {selectedObject && <SpaceObjectDetails spaceObject={selectedObject} />}
 
         <CategorySection
           onCategorySelect={setSelectedCategory}
