@@ -139,6 +139,16 @@ button.active {
   color: #f5f7ff;
 }
 
+.space-object-category {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background-color: #18213d;
+  border: 1px solid #3b4d82;
+  font-size: 0.8rem;
+  color: #9fb4ff;
+}
+
 /* Hero */
 
 .hero-section {

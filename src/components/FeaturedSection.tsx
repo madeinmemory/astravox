@@ -24,7 +24,7 @@ function FeaturedSection({
   });
   return (
     <section>
-      <h2>Featured Object</h2>
+      <h2>Featured Objects</h2>
       <p>
         {filteredObjects.length}{" "}
         {filteredObjects.length === 1 ? "object" : "objects"} found.

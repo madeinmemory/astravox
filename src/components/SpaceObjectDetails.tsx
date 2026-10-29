@@ -8,7 +8,8 @@ function SpaceObjectDetails({ spaceObject }: SpaceObjectDetailProps) {
   return (
     <div className="space-object-details">
       <h2>{spaceObject.name}</h2>
-      <p>{spaceObject.category}</p>
+
+      <p className="space-object-category">{spaceObject.category}</p>
       <p>{spaceObject.description}</p>
     </div>
   );
